@@ -1,0 +1,28 @@
+require:
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 2.4
+  NewCops: enable
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+# Metrics/AbcSize:
+#   Max: 40
+
+Metrics/BlockLength:
+  Exclude:
+    - fluent-plugin-kafka-status.gemspec
+    - test/**/*.rb
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
+    - lib/fluent/plugin/in_ssl_check.rb
+
+# Metrics/MethodLength:
+#   Max: 20
+
+Style/Documentation:
+  Enabled: false
