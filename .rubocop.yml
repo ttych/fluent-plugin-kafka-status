@@ -8,6 +8,9 @@ AllCops:
 Gemspec/DevelopmentDependencies:
   Enabled: false
 
+Layout/LineLength:
+  Max: 140
+
 # Metrics/AbcSize:
 #   Max: 40
 
@@ -21,8 +24,10 @@ Metrics/ClassLength:
     - test/**/*.rb
     - lib/fluent/plugin/in_ssl_check.rb
 
-# Metrics/MethodLength:
-#   Max: 20
+Metrics/MethodLength:
+  Max: 25
+  Exclude:
+    - test/**/*.rb
 
 Style/Documentation:
   Enabled: false
