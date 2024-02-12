@@ -122,8 +122,8 @@ module Fluent
       def events_for_topics
         kafka do |kafka|
           events = []
-          timestamp = Time.now.utc.send("to_#{timestamp_format}")
           kafka.topics.each do |topic|
+            timestamp = Time.now.utc.send("to_#{timestamp_format}")
             events
               .append({ 'timestamp' => timestamp,
                         'metric_family' => 'topic',
