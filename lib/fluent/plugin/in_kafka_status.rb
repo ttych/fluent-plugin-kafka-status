@@ -116,7 +116,7 @@ module Fluent
       # tags_topic: <topic>
       ### metric 3 - replica_count
       # family: topic
-      # name: replica_count
+      # name: configured_replica_count
       # value: count
       # tags_topic: <topic>
       def events_for_topics
