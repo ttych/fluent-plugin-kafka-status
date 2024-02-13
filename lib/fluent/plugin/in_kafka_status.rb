@@ -137,7 +137,7 @@ module Fluent
                         "#{event_prefix}topic" => topic })
               .append({ 'timestamp' => timestamp,
                         'metric_family' => 'topic',
-                        'metric_name' => 'replica_count',
+                        'metric_name' => 'configured_replica_count',
                         'metric_value' => kafka.replica_count_for(topic),
                         "#{event_prefix}topic" => topic })
           end
